@@ -14,15 +14,15 @@
             <th>Added</th>
             <th>Actions</th>
         </tr>
-        {% for task in tasks}
+        {% for task in tasks %}
         <tr>
             <td>{{task.content}}</td>
-            <td>{{task.date}}</td>
+            <td>{{task.date_created}}</td>
             <td>
-                <a href="http://">Delete</a>
+                <a href="/delete/{{task.id}}">Delete</a>
             </td>
             <td>
-                <a href="http://">Update</a>
+                <a href="/update/{{task.id}}">Update</a>
             </td>
         </tr>
         {% endfor %}
