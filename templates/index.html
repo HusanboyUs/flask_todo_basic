@@ -14,9 +14,10 @@
             <th>Added</th>
             <th>Actions</th>
         </tr>
+        {% for task in tasks}
         <tr>
-            <td>sd</td>
-            <td>sd</td>
+            <td>{{task.content}}</td>
+            <td>{{task.date}}</td>
             <td>
                 <a href="http://">Delete</a>
             </td>
@@ -24,10 +25,11 @@
                 <a href="http://">Update</a>
             </td>
         </tr>
+        {% endfor %}
     </table>
     <form method="post">
         <input type="text" name="content" id="content ">
         <input type="submit" value="Add Task">
     </form>
 </div> 
-{% endblock %}
+{% endblock %} 
